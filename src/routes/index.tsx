@@ -50,6 +50,12 @@ const faqs = [
   ["Meus dados ficam seguros?", "Sim. A plataforma foi construída com práticas modernas de segurança e privacidade."],
 ];
 
+const metrics = [
+  { Icon: BarChart3, title: "Origem do tráfego" },
+  { Icon: MousePointerClick, title: "Visitas e cliques no tempo" },
+  { Icon: Share2, title: "Ranking dos botões" },
+];
+
 function Logo() { return <a href="#top" className="logo" aria-label="Coonexta"><span className="logo-mark">◖</span><strong>Coonexta</strong></a>; }
 
 function LandingPage() {
@@ -63,7 +69,7 @@ function LandingPage() {
 
     <section className="feature-band"><div className="section"><span className="eyebrow">Na prática</span><h2>Feito pra converter — <em>não só pra bonito.</em></h2><p className="lead">Cada recurso pensado pra transformar visita em cliente. Veja como fica no celular do seu público.</p><div className="feature-list">{features.map((f,i)=><article className={i%2 ? "feature reverse" : "feature"} key={f.title}><div className="feature-image"><img src={f.image} alt={f.title}/></div><div className="feature-copy"><span className="tag">{f.tag}</span><h3>{f.title}</h3><p>{f.text}</p></div></article>)}</div></div></section>
 
-    <section className="analytics"><div className="section analytics-grid"><div><span className="eyebrow dark">Analytics em tempo real</span><h2>Saiba de onde vem <em>cada clique.</em></h2><p className="lead">Chega de achismo. Descubra qual rede social realmente traz clientes, qual botão converte mais e em que dispositivo seu público te acessa — tudo atualizado ao vivo.</p><div className="metric-list">{[[BarChart3,"Origem do tráfego"],[MousePointerClick,"Visitas e cliques no tempo"],[Share2,"Ranking dos botões"]].map(([Icon,t])=><div className="metric" key={String(t)}>{typeof Icon !== "string" && <Icon size={20}/>}<span>{String(t)}</span></div>)}</div></div><div><img className="dashboard" src={analyticsImage.url} alt="Painel de analytics em tempo real"/><div className="pills"><span>Dados ao vivo</span><span>Sem código</span><span>LGPD friendly</span></div></div></div></section>
+    <section className="analytics"><div className="section analytics-grid"><div><span className="eyebrow dark">Analytics em tempo real</span><h2>Saiba de onde vem <em>cada clique.</em></h2><p className="lead">Chega de achismo. Descubra qual rede social realmente traz clientes, qual botão converte mais e em que dispositivo seu público te acessa — tudo atualizado ao vivo.</p><div className="metric-list">{metrics.map(({ Icon, title })=><div className="metric" key={title}><Icon size={20}/><span>{title}</span></div>)}</div></div><div><img className="dashboard" src={analyticsImage.url} alt="Painel de analytics em tempo real"/><div className="pills"><span>Dados ao vivo</span><span>Sem código</span><span>LGPD friendly</span></div></div></div></section>
 
     <section id="exemplos" className="section examples"><span className="eyebrow">Exemplos reais</span><h2>Serve pro seu <em>negócio também.</em></h2><p className="lead">De barbearia a consultório, cada mini-site é único como sua marca.</p><div className="example-grid">{[[shapeImage.url,"Shape","Beleza"],[natuImage.url,"NatuPet","Pet Shop"],[primeImage.url,"Barbearia Prime","Barbearia"],[mooviImage.url,"Mooviloc","Aluguel de motos"]].map(([src,name,type])=><article className="example" key={name}><img src={src} alt={`Mini-site de ${name}`}/><div><strong>{name}</strong><span>{type}</span></div></article>)}</div></section>
 
