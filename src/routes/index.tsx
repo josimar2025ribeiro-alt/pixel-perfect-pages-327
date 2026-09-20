@@ -15,9 +15,9 @@ import mooviImage from "../assets/exemplo-mooviloc.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Coonexta — Sua presença digital em um único lugar" },
+    { title: "Vision — Sua presença digital em um único lugar" },
     { name: "description", content: "Crie seu mini-site profissional com WhatsApp, catálogo, pagamentos, links e muito mais." },
-    { property: "og:title", content: "Coonexta — Sua presença digital" },
+    { property: "og:title", content: "Vision — Sua presença digital" },
     { property: "og:description", content: "Toda sua presença online em um único link." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
@@ -37,12 +37,12 @@ const plans = [
   { label: "Individual", name: "Plano Pro", desc: "Pra você, seu negócio, seu link único.", price: "R$ 97,90", detail: "1 site · cancele quando quiser", cta: "Assinar agora", hot: false, items: ["1 mini-site profissional", "WhatsApp, Pix, endereço, catálogo, redes", "Agendamento online com horários próprios", "Pix com QR Code e copia e cola", "Personalização total", "Analytics em tempo real", "Suporte no WhatsApp"] },
   { label: "Melhor pra agências", name: "Plano Premium", desc: "Agência começando? Gerencie múltiplas marcas num painel só.", price: "R$ 197,90", detail: "Até 30 sites · cancele quando quiser", cta: "Assinar o Premium", hot: true, items: ["Até 30 mini-sites", "Painel único pra gerenciar tudo", "Subcontas ilimitadas", "Analytics separado por site", "Todos os recursos do plano Pro", "Suporte prioritário no WhatsApp"] },
   { label: "Escala sem limite", name: "Plano Scale", desc: "Agência que gerencia carteira grande — e cresce sem trocar de plano.", price: "R$ 297,90", detail: "Até 100 sites · compre mais depois", cta: "Assinar o Scale", hot: false, items: ["Até 100 mini-sites inclusos", "Compre pacotes de sites extras", "Todos os recursos do plano Premium", "Subcontas ilimitadas", "Onboarding e suporte prioritário"] },
-  { label: "Em breve", name: "Plano Whitelabel", desc: "Sua marca no lugar da Coonexta — a plataforma inteira, do seu jeito.", price: "Em breve", detail: "Ainda não disponível", cta: "Em breve", hot: false, disabled: true, items: ["Domínio próprio", "100% com sua marca", "Todos os recursos liberados", "Mini-sites sem limite prático", "Subcontas ilimitadas", "Onboarding dedicado"] },
+  { label: "Em breve", name: "Plano Whitelabel", desc: "Sua marca no lugar da Vision — a plataforma inteira, do seu jeito.", price: "Em breve", detail: "Ainda não disponível", cta: "Em breve", hot: false, disabled: true, items: ["Domínio próprio", "100% com sua marca", "Todos os recursos liberados", "Mini-sites sem limite prático", "Subcontas ilimitadas", "Onboarding dedicado"] },
 ];
 
 const faqs = [
   ["Não sou bom com tecnologia — vou conseguir mexer?", "Sim. A plataforma foi feita para você montar e publicar tudo sem programação ou designer."],
-  ["Eu já tenho Instagram, site ou linktree. Pra que outro?", "A Coonexta reúne todos os seus canais e ainda adiciona catálogo, Pix, agenda e métricas em uma página feita para converter."],
+  ["Eu já tenho Instagram, site ou linktree. Pra que outro?", "A Vision reúne todos os seus canais e ainda adiciona catálogo, Pix, agenda e métricas em uma página feita para converter."],
   ["Meu cliente vai perder tempo pra achar meu contato?", "Não. WhatsApp, redes, Pix e outros botões ficam visíveis e acessíveis com um toque."],
   ["R$ 97,90 por mês. E se eu não gostar?", "Você pode cancelar quando quiser. Se não amar a experiência, a gente devolve seu dinheiro."],
   ["Preciso saber programar ou pagar designer?", "Não. Você escolhe cores, imagens, textos e a ordem das seções em poucos minutos."],
@@ -56,7 +56,7 @@ const metrics = [
   { Icon: Share2, title: "Ranking dos botões" },
 ];
 
-function Logo() { return <a href="#top" className="logo" aria-label="Coonexta"><span className="logo-mark">◖</span><strong>Coonexta</strong></a>; }
+function Logo() { return <a href="#top" className="logo" aria-label="Vision"><span className="logo-mark">◖</span><strong>Vision</strong></a>; }
 
 function LandingPage() {
   const [menu, setMenu] = useState(false);
@@ -78,7 +78,7 @@ function LandingPage() {
     <section id="faq" className="section faq"><div className="faq-head"><span className="eyebrow">Objeções, respondidas</span><h2>Aquela dúvida que você tá <em>pensando agora.</em></h2><p className="lead">A gente sabe que trocar de ferramenta dá preguiça. Por isso responde tudo sem enrolação.</p></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<ChevronDown size={20}/></summary><p>{a}</p></details>)}</div></section>
 
     <section className="final-cta"><div className="section"><h2>Pronto pra ter um cartão que abre sozinho?</h2><p>Cancela quando quiser. E se você não amar, a gente devolve seu dinheiro.</p><div className="actions center"><a className="btn lime" href="https://www.coonexta.com.br/checkout?plano=pro">Começar agora — R$ 97,90/mês <ArrowRight size={17}/></a><a className="btn outline" href="#exemplos">Ver exemplos</a></div></div></section>
-    <footer><div className="section footer-grid"><Logo/><p>Sua presença digital completa em um único lugar.</p><span>© 2026 Coonexta</span></div></footer>
+    <footer><div className="section footer-grid"><Logo/><p>Sua presença digital completa em um único lugar.</p><span>© 2026 Vision</span></div></footer>
     <a className="whatsapp" href="https://api.whatsapp.com/send?phone=5531992250661" aria-label="Fale conosco no WhatsApp"><MessageCircle/></a>
   </main>;
 }

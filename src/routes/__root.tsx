@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Coonexta" },
+      { title: "Vision" },
       { name: "description", content: "Sua presença digital completa em um único lugar." },
-      { name: "author", content: "Coonexta" },
+      { name: "author", content: "Vision" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
