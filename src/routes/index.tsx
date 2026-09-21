@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, BarChart3, Check, ChevronDown, Menu, MessageCircle, MousePointerClick, Share2, Sparkles, X } from "lucide-react";
 import { useState } from "react";
-import heroVideo from "../assets/hero-video.webm.asset.json";
-import brandImage from "../assets/Frame_860.webp.asset.json";
-import leadImage from "../assets/Frame_857-min.webp.asset.json";
-import paymentImage from "../assets/Frame_858.webp.asset.json";
-import catalogImage from "../assets/Frame_861.webp.asset.json";
-import linksImage from "../assets/Frame_863-min.webp.asset.json";
-import analyticsImage from "../assets/analytics-dashboard.png.asset.json";
-import shapeImage from "../assets/exemplo-shape.png.asset.json";
-import natuImage from "../assets/exemplo-natupet.png.asset.json";
-import primeImage from "../assets/exemplo-prime.png.asset.json";
-import mooviImage from "../assets/exemplo-mooviloc.png.asset.json";
+const heroVideo = "/hero-video.webm";
+const brandImage = "/Frame_860.webp";
+const leadImage = "/Frame_857-min.webp";
+const paymentImage = "/Frame_858.webp";
+const catalogImage = "/Frame_861.webp";
+const linksImage = "/Frame_863-min.webp";
+const analyticsImage = "/analytics-dashboard.png";
+const shapeImage = "/exemplo-shape.png";
+const natuImage = "/exemplo-natupet.png";
+const primeImage = "/exemplo-prime.png";
+const mooviImage = "/exemplo-mooviloc.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -26,11 +26,11 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { tag: "Personalização", title: "Do seu jeito, com sua cara", text: "Cores, logo, capa, tipografia e ordem das seções. Cada mini-site é único como sua marca.", image: brandImage.url },
-  { tag: "Captura de contato", title: "Formulário integrado", text: "Colete e-mail e telefone dos visitantes direto do seu mini-site — vira lista de clientes na hora.", image: leadImage.url },
-  { tag: "Pagamento", title: "Cobre com Pix em segundos", text: "QR Code, copia-e-cola e chave Pix visíveis com um toque. Menos fricção, mais venda.", image: paymentImage.url },
-  { tag: "Catálogo", title: "Vitrine visual completa", text: "Produtos ou serviços com foto, descrição, preço e botão de pedir. Seu cardápio pronto.", image: catalogImage.url },
-  { tag: "Links ilimitados", title: "Cadastre qualquer link", text: "WhatsApp, Instagram, TikTok, YouTube, agenda, catálogo — tudo num lugar só.", image: linksImage.url },
+  { tag: "Personalização", title: "Do seu jeito, com sua cara", text: "Cores, logo, capa, tipografia e ordem das seções. Cada mini-site é único como sua marca.", image: brandImage },
+  { tag: "Captura de contato", title: "Formulário integrado", text: "Colete e-mail e telefone dos visitantes direto do seu mini-site — vira lista de clientes na hora.", image: leadImage },
+  { tag: "Pagamento", title: "Cobre com Pix em segundos", text: "QR Code, copia-e-cola e chave Pix visíveis com um toque. Menos fricção, mais venda.", image: paymentImage },
+  { tag: "Catálogo", title: "Vitrine visual completa", text: "Produtos ou serviços com foto, descrição, preço e botão de pedir. Seu cardápio pronto.", image: catalogImage },
+  { tag: "Links ilimitados", title: "Cadastre qualquer link", text: "WhatsApp, Instagram, TikTok, YouTube, agenda, catálogo — tudo num lugar só.", image: linksImage },
 ];
 
 const plans = [
@@ -63,15 +63,15 @@ function LandingPage() {
   return <main id="top">
     <header className="site-header"><div className="nav-wrap"><Logo/><nav className={menu ? "nav-links open" : "nav-links"}><a href="#como">Como funciona</a><a href="#exemplos">Exemplos</a><a href="#preco">Preço</a><a href="#faq">FAQ</a></nav><div className="nav-actions"><a href="https://www.coonexta.com.br/login">Entrar</a><a className="btn lime compact" href="#preco">Começar agora</a><span className="flags">🇧🇷 🇺🇸 🇪🇸</span></div><button className="menu-button" aria-label="Abrir menu" onClick={() => setMenu(!menu)}>{menu ? <X/> : <Menu/>}</button></div></header>
 
-    <section className="hero section"><div className="hero-copy"><span className="eyebrow"><Sparkles size={13}/> Sua presença digital</span><h1>Sua presença digital completa em <em>um único lugar.</em></h1><p>Crie um mini-site profissional para reunir WhatsApp, redes sociais, catálogo, links, pagamentos, localização e muito mais. Compartilhe com um único link, QR Code ou cartão NFC — e transforme visitantes em clientes.</p><div className="actions"><a className="btn lime" href="#preco">Ver preços <ArrowRight size={17}/></a><a className="btn pink" href="#exemplos">Ver templates prontos</a></div></div><div className="hero-media"><div className="glow"/><video autoPlay muted loop playsInline src={heroVideo.url}/><span className="live-dot">● &nbsp; Ao vivo</span><span className="channel-pill">▦ &nbsp; 1 link · todos os canais</span></div></section>
+    <section className="hero section"><div className="hero-copy"><span className="eyebrow"><Sparkles size={13}/> Sua presença digital</span><h1>Sua presença digital completa em <em>um único lugar.</em></h1><p>Crie um mini-site profissional para reunir WhatsApp, redes sociais, catálogo, links, pagamentos, localização e muito mais. Compartilhe com um único link, QR Code ou cartão NFC — e transforme visitantes em clientes.</p><div className="actions"><a className="btn lime" href="#preco">Ver preços <ArrowRight size={17}/></a><a className="btn pink" href="#exemplos">Ver templates prontos</a></div></div><div className="hero-media"><div className="glow"/><video autoPlay muted loop playsInline src={heroVideo}/><span className="live-dot">● &nbsp; Ao vivo</span><span className="channel-pill">▦ &nbsp; 1 link · todos os canais</span></div></section>
 
     <section id="como" className="section steps"><span className="eyebrow">Como funciona</span><h2>Sua página profissional pronta em <em>menos de 3 minutos.</em></h2><div className="step-grid">{[["01","Crie do seu jeito","Personalize cores, logo, links, WhatsApp, Pix, catálogo, redes sociais e muito mais. Sem programação."],["02","Publique instantaneamente","Sua página fica online na hora, com um link exclusivo para compartilhar onde quiser."],["03","Compartilhe e converta","Adicione na bio do Instagram, envie pelo WhatsApp, use no QR Code ou cartão NFC. Facilite o contato e transforme visitantes em clientes."]].map(([n,t,d])=><article className="step" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
 
     <section className="feature-band"><div className="section"><span className="eyebrow">Na prática</span><h2>Feito pra converter — <em>não só pra bonito.</em></h2><p className="lead">Cada recurso pensado pra transformar visita em cliente. Veja como fica no celular do seu público.</p><div className="feature-list">{features.map((f,i)=><article className={i%2 ? "feature reverse" : "feature"} key={f.title}><div className="feature-image"><img src={f.image} alt={f.title}/></div><div className="feature-copy"><span className="tag">{f.tag}</span><h3>{f.title}</h3><p>{f.text}</p></div></article>)}</div></div></section>
 
-    <section className="analytics"><div className="section analytics-grid"><div><span className="eyebrow dark">Analytics em tempo real</span><h2>Saiba de onde vem <em>cada clique.</em></h2><p className="lead">Chega de achismo. Descubra qual rede social realmente traz clientes, qual botão converte mais e em que dispositivo seu público te acessa — tudo atualizado ao vivo.</p><div className="metric-list">{metrics.map(({ Icon, title })=><div className="metric" key={title}><Icon size={20}/><span>{title}</span></div>)}</div></div><div><img className="dashboard" src={analyticsImage.url} alt="Painel de analytics em tempo real"/><div className="pills"><span>Dados ao vivo</span><span>Sem código</span><span>LGPD friendly</span></div></div></div></section>
+    <section className="analytics"><div className="section analytics-grid"><div><span className="eyebrow dark">Analytics em tempo real</span><h2>Saiba de onde vem <em>cada clique.</em></h2><p className="lead">Chega de achismo. Descubra qual rede social realmente traz clientes, qual botão converte mais e em que dispositivo seu público te acessa — tudo atualizado ao vivo.</p><div className="metric-list">{metrics.map(({ Icon, title })=><div className="metric" key={title}><Icon size={20}/><span>{title}</span></div>)}</div></div><div><img className="dashboard" src={analyticsImage} alt="Painel de analytics em tempo real"/><div className="pills"><span>Dados ao vivo</span><span>Sem código</span><span>LGPD friendly</span></div></div></div></section>
 
-    <section id="exemplos" className="section examples"><span className="eyebrow">Exemplos reais</span><h2>Serve pro seu <em>negócio também.</em></h2><p className="lead">De barbearia a consultório, cada mini-site é único como sua marca.</p><div className="example-grid">{[[shapeImage.url,"Shape","Beleza"],[natuImage.url,"NatuPet","Pet Shop"],[primeImage.url,"Barbearia Prime","Barbearia"],[mooviImage.url,"Mooviloc","Aluguel de motos"]].map(([src,name,type])=><article className="example" key={name}><img src={src} alt={`Mini-site de ${name}`}/><div><strong>{name}</strong><span>{type}</span></div></article>)}</div></section>
+    <section id="exemplos" className="section examples"><span className="eyebrow">Exemplos reais</span><h2>Serve pro seu <em>negócio também.</em></h2><p className="lead">De barbearia a consultório, cada mini-site é único como sua marca.</p><div className="example-grid">{[[shapeImage,"Shape","Beleza"],[natuImage,"NatuPet","Pet Shop"],[primeImage,"Barbearia Prime","Barbearia"],[mooviImage,"Mooviloc","Aluguel de motos"]].map(([src,name,type])=><article className="example" key={name}><img src={src} alt={`Mini-site de ${name}`}/><div><strong>{name}</strong><span>{type}</span></div></article>)}</div></section>
 
     <section id="preco" className="pricing"><div className="section"><span className="eyebrow">Preço</span><h2>Escolha o plano que <em>cabe no seu jogo.</em></h2><p className="lead">Um site pra você ou uma pilha pra agência. Sem taxa de setup em nenhum.</p><div className="plan-grid">{plans.map(p=><article className={p.hot ? "plan featured" : "plan"} key={p.name}><span className="plan-label">{p.label}</span><h3>{p.name}</h3><p>{p.desc}</p><div className="price">{p.price}{!p.disabled && <small>/mês</small>}</div><span className="plan-detail">{p.detail}</span><ul>{p.items.map(x=><li key={x}><Check size={16}/>{x}</li>)}</ul><a className={p.disabled ? "btn disabled" : p.hot ? "btn pink" : "btn dark-btn"} href={p.disabled ? undefined : "https://www.coonexta.com.br/checkout"}>{p.cta}<ArrowRight size={16}/></a></article>)}</div></div></section>
 
