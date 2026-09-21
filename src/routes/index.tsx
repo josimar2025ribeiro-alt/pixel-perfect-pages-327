@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, BarChart3, Check, ChevronDown, Menu, MessageCircle, MousePointerClick, Share2, Sparkles, X } from "lucide-react";
 import { useState } from "react";
-import heroVideo from "../assets/hero-video.webm.asset.json";
-import brandImage from "../assets/Frame_860.webp.asset.json";
-import leadImage from "../assets/Frame_857-min.webp.asset.json";
-import paymentImage from "../assets/Frame_858.webp.asset.json";
-import catalogImage from "../assets/Frame_861.webp.asset.json";
-import linksImage from "../assets/Frame_863-min.webp.asset.json";
-import analyticsImage from "../assets/analytics-dashboard.png.asset.json";
-import shapeImage from "../assets/exemplo-shape.png.asset.json";
-import natuImage from "../assets/exemplo-natupet.png.asset.json";
-import primeImage from "../assets/exemplo-prime.png.asset.json";
-import mooviImage from "../assets/exemplo-mooviloc.png.asset.json";
+const heroVideo = "/hero-video.webm";
+const brandImage = "/Frame_860.webp";
+const leadImage = "/Frame_857-min.webp";
+const paymentImage = "/Frame_858.webp";
+const catalogImage = "/Frame_861.webp";
+const linksImage = "/Frame_863-min.webp";
+const analyticsImage = "/analytics-dashboard.png";
+const shapeImage = "/exemplo-shape.png";
+const natuImage = "/exemplo-natupet.png";
+const primeImage = "/exemplo-prime.png";
+const mooviImage = "/exemplo-mooviloc.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
