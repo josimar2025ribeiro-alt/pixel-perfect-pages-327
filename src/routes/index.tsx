@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Check, ChevronDown, Menu, MessageCircle, MousePointerClick, Share2, Sparkles, X } from "lucide-react";
+import { ArrowRight, BarChart3, Check, ChevronDown, Menu, MousePointerClick, Share2, Sparkles, X } from "lucide-react";
 import { useState } from "react";
 const heroVideo = "/hero-video.webm";
 const brandImage = "/Frame_860.webp";
@@ -79,6 +79,8 @@ function LandingPage() {
 
     <section className="final-cta"><div className="section"><h2>Pronto pra ter um cartão que abre sozinho?</h2><p>Cancela quando quiser. E se você não amar, a gente devolve seu dinheiro.</p><div className="actions center"><a className="btn lime" href="https://www.coonexta.com.br/checkout?plano=pro">Começar agora — R$ 97,90/mês <ArrowRight size={17}/></a><a className="btn outline" href="#exemplos">Ver exemplos</a></div></div></section>
     <footer><div className="section footer-grid"><Logo/><p>Sua presença digital completa em um único lugar.</p><span>© 2026 Vision</span></div></footer>
-    <a className="whatsapp" href="https://api.whatsapp.com/send?phone=5531992250661" aria-label="Fale conosco no WhatsApp"><MessageCircle/></a>
+    <a className="whatsapp" href="https://wa.me/5519993082135" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+      <svg viewBox="0 0 32 32" role="img" aria-hidden="true"><path fill="currentColor" d="M16.04 3C8.84 3 3 8.73 3 15.8c0 2.48.73 4.9 2.1 6.96L3.72 27.8l5.2-1.34a13.2 13.2 0 0 0 7.11 2.04h.01C23.24 28.5 29 22.77 29 15.8 29 8.73 23.24 3 16.04 3Zm0 23.34a11.1 11.1 0 0 1-5.65-1.53l-.4-.24-3.08.8.82-2.95-.26-.42a10.48 10.48 0 0 1-1.7-5.72c0-5.82 4.75-10.55 10.6-10.55 5.83 0 10.58 4.73 10.58 10.55 0 5.81-4.75 10.54-10.6 10.54Zm5.81-7.9c-.32-.16-1.88-.92-2.17-1.03-.29-.1-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.38.24-.7.08-.32-.16-1.34-.49-2.55-1.57a9.56 9.56 0 0 1-1.77-2.18c-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.31.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.31-1.11 1.08-1.11 2.63 0 1.56 1.14 3.06 1.3 3.27.16.21 2.24 3.4 5.42 4.77.76.32 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.76 2.14-1.5.27-.74.27-1.37.19-1.5-.08-.14-.29-.22-.61-.38Z"/></svg>
+    </a>
   </main>;
 }
